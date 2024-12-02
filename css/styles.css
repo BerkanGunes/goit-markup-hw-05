@@ -236,6 +236,21 @@ button{
     background-color: #f4f4fd;
     text-align: center;
 }
+.icon {
+    width: 40px;
+    height: 40px;
+    fill: #0077b5;
+    /* İkon rengi (örneğin LinkedIn mavisi) */
+}
+.icon-container {
+    display: flex;
+    justify-content: center;
+    /* Merkeze hizalar */
+    align-items: center;
+    /* Yatayda hizalar */
+    gap: 12px;
+    /* İkonlar arasındaki boşluk */
+}
 
 .third-section .container {
     text-align: center;
