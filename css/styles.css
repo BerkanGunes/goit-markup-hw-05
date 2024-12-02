@@ -121,7 +121,14 @@ h1 {
 }
 .first-section {
     padding: 188px 0; /* Kenar boşlukları */
-    background-color: #2e2f42; /* Arka plan rengi */
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            /* Siyah şeffaflık */
+            url("../images/people-office1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
 }
 
 .first-section .container {
@@ -135,7 +142,7 @@ h1 {
     justify-content: center; /* Dikeyde ortalar */
     align-items: center; /* Yatayda ortalar */
     padding: 188px 0; /* Kenar boşlukları */
-    background-color: #2e2f42; /* Arka plan rengi */
+    
     text-align: center; /* İçeriği ortalar */
 }
 
