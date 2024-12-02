@@ -236,20 +236,44 @@ button{
     background-color: #f4f4fd;
     text-align: center;
 }
-.icon {
-    width: 40px;
-    height: 40px;
-    fill: #0077b5;
-    /* İkon rengi (örneğin LinkedIn mavisi) */
-}
 .icon-container {
     display: flex;
+    /* İkonları yan yana sıralar */
     justify-content: center;
-    /* Merkeze hizalar */
+    /* Ortaya hizalar */
     align-items: center;
-    /* Yatayda hizalar */
-    gap: 12px;
+    /* Dikey hizalamayı sağlar */
+    gap: 15px;
     /* İkonlar arasındaki boşluk */
+}
+
+.icon-wrapper {
+    display: flex;
+    justify-content: center;
+    /* İkonu dairenin ortasına hizalar */
+    align-items: center;
+    /* İkonu dairenin ortasına hizalar */
+    width: 50px;
+    /* Dairenin genişliği */
+    height: 50px;
+    /* Dairenin yüksekliği */
+    background-color: #5865f2;
+    /* Dairenin rengi */
+    border-radius: 50%;
+    /* Daire şekli */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    /* Tıklanabilir işaretçi */
+    margin-top: 8px;
+}
+
+
+
+.icon {
+    fill: white;
+    /* İkonun rengi */
+    width: 24px;
+    height: 24px;
 }
 
 .third-section .container {
