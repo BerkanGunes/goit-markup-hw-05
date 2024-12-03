@@ -308,17 +308,10 @@ button {
     padding: 32px 0;
 }
 
-/* Special styling for the first list item */
-.list-item:first-child {
-    border-radius: 0px 0px 4px 4px;
-}
-
-/* Container inside the list item */
 .list-item__container {
     padding: 32px 0;
 }
 
-/* Team Member Details */
 .team-image {
     width: 100%;
     height: auto;
@@ -339,7 +332,6 @@ button {
     line-height: 1.5;
 }
 
-/* Social Media List Styling */
 .social-media-list {
     display: flex;
     justify-content: center;
@@ -349,13 +341,11 @@ button {
     margin: 0;
 }
 
-/* Social Media Item Styling */
 .social-media-item {
     width: 40px;
     height: 40px;
 }
 
-/* Social Media Link Styling */
 .social-media-link {
     width: 100%;
     height: 100%;
@@ -372,12 +362,12 @@ button {
     background-color: #404bbf;
 }
 
-/* Social Media Icon Styling */
 .social-media-icon {
     width: 16px;
     height: 16px;
     fill: #f4f4fd;
 }
+
 
 
 
