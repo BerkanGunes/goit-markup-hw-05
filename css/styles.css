@@ -81,19 +81,17 @@ img {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: #2e2f42;
-    position: relative;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.nav-item .link:hover,
-.nav-item .link:focus {
     color: #404bbf;
+    /* 1. maddenin şartı */
+    position: relative;
+    /* 1. maddenin şartı */
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-item .link::after {
     content: '';
     width: 100%;
+    /* 1. maddenin şartı */
     height: 4px;
     background-color: #404bbf;
     position: absolute;
@@ -122,15 +120,30 @@ img {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: #434455;
+    color: #404bbf;
+    /* Aynı sınıf kullanıldı */
+    position: relative;
+    /* 1. maddenin şartı */
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-list-ul li a:hover,
-.contact-list-ul li a:focus {
-    color: #404bbf;
+.contact-list-ul li a::after {
+    content: '';
+    width: 100%;
+    /* 1. maddenin şartı */
+    height: 4px;
+    background-color: #404bbf;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    border-radius: 2px;
+    display: none;
 }
 
+.contact-list-ul li a:hover::after,
+.contact-list-ul li a:focus::after {
+    display: block;
+}
 
 /* Section Styling */
 h1 {
