@@ -277,13 +277,19 @@ button {
     background-color: #f4f4fd;
     text-align: center;
 }
-
+.third-section__title {
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: #2E2F42;
+    margin-bottom: 72px;
+}
 .third-section__list {
     display: flex;
     gap: 24px;
     list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 .list-item {
@@ -295,7 +301,8 @@ button {
     overflow: hidden;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding: 32px 0;
+    padding: 0 0 32px 0;
+    border-radius: 0px 0px 4px 4px;
 }
 
 .image-container {
@@ -306,7 +313,7 @@ button {
 .team-image {
     width: 100%;
     height: auto;
-    margin-bottom: 16px;
+    margin-bottom: 40px;
 }
 
 .member-name {
@@ -327,8 +334,7 @@ button {
     justify-content: center;
     gap: 24px;
     list-style: none;
-    padding: 0;
-    margin: 0;
+    
 }
 
 .social-media-item {
