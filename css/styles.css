@@ -143,33 +143,39 @@ h1 {
 }
 
 .first-section {
+    position: relative; /* İçindeki div'ler için referans noktası */
     max-width: 1440px;
-    
+    height: 600px; /* İsteğe bağlı: yüksekliği belirleyin */
+    margin: 0 auto;
     padding: 188px 0;
-    
-    position: relative;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url("../images/people-office1.jpg");
-    
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
+      url("../images/people-office1.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     display: flex;
-    flex-direction: column;
-    
-    justify-content: center;
-    
-    align-items: center;
-    
+    justify-content: center; /* Yatayda ortalama */
+    align-items: center; /* Dikeyde ortalama */
     text-align: center;
-    
-}
-
+}  
+.backdrop {
+    position: absolute; /* Section'a göre konumlandırma */
+    top: 50%; /* Dikeyde ortalama */
+    left: 50%; /* Yatayda ortalama */
+    transform: translate(-50%, -50%); /* Merkezi tam ortalama */
+    width: 408px;
+    height: 584px;
+    background-color: #f9f9f9;
+    z-index: 1; /* Üst üste yığılma sırası */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+    display: flex;
+    justify-content: center; /* İçeriği yatayda ortala */
+    align-items: center; /* İçeriği dikeyde ortala */
+    border-radius: 8px; /* Köşeleri yuvarla */
+  }
 
 .first-section__title {
     max-width: 496px;
-    
     font-size: 56px;
     line-height: 60px;
     color: #ffffff;

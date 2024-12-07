@@ -104,8 +104,32 @@
             <button class="first-section__btn" type="button">
                 Order Service
             </button>
+            
+            
+        </div>
+        <div class="backdrop" id="modalBackdrop">
+            <div class="modal">
+                <button class="close-btn" id="closeModalBtn">✖</button>
+                <h2>Leave your contacts and we will call you back</h2>
+                <form>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Your name">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" placeholder="Your phone">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Your email">
+                    <label for="comment">Comment</label>
+                    <textarea id="comment" placeholder="Your comment"></textarea>
+                    <div>
+                        <input type="checkbox" id="privacy" required>
+                        <label for="privacy">I accept the terms and conditions of the Privacy Policy</label>
+                    </div>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
         </div>
         </section>
+        
         <section class="second-section">
             <div class="container">
                 <h2 class="visually-hidden">Our Features</h2>
