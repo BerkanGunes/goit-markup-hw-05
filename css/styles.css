@@ -179,7 +179,7 @@ h1 {
 }
 
 
-button {
+.first-section button {
     display: block;
     margin: 0 auto;
     min-width: 169px;
@@ -488,9 +488,7 @@ button {
 .branding-inner {
     margin-right: 120px;
 }
-.branding {
-    margin-right: 120px;
-}
+
 
 .footer-logo_link {
     display: inline-block;
@@ -565,5 +563,46 @@ button {
     width: 24px;
     height: 24px;
 }
+.email-input{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 453px;
+    height: 80px;
+    padding-left:80px;
+    gap:16px;
+}
+.email-input p{
+    color:rgba(255, 255, 255, 1);
+}
+.email-part2{
+    display: flex;
+    gap: 16px;
+}
+.email-form {
+    width: 264px;
+    height: 40px;
+    color: #ffffff;
+    background-color: #2e2e50;
+    border: 1px solid #cccccc;
+    border-radius: 4px; 
+}
+.footer button {
+        font-size: 16px;
+        color: #ffffff;
+        background-color: rgba(77, 90, 229, 1);
+        border: 1px solid rgba(77, 90, 229, 1);
+        border-radius: 4px;
+}
+.fbutton{
+    background-color: rgba(77, 90, 229, 1);
+    display:flex;
+    width:165px;
+    height:40px;
+    padding: 8px 24px 8px 24px;
+    gap: 16px;
+    border-radius: 4px 4px 4px 4px;
+    
 
+}
   

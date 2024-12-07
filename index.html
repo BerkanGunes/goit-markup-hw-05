@@ -53,6 +53,13 @@
               <path fill="#4D5AE5" d="M29.851 29.93h2.132v9.594h-2.132V29.93ZM38.38 34.194h2.132v5.33H38.38v-5.33ZM21.322 37.392h2.132v2.132h-2.132v-2.132ZM14.925 36.326h2.133v3.198h-2.133v-3.198Z" />
               <path fill="#2E2F42" d="M3.198 56.582h51.173a3.198 3.198 0 0 0 3.199-3.198v-4.265a3.198 3.198 0 0 0-3.199-3.198h-1.066V19.334l6.056-5.736a3.216 3.216 0 1 0-1.493-1.526l-4.563 4.325v-2.46a3.198 3.198 0 0 0-3.198-3.198H7.463a3.198 3.198 0 0 0-3.199 3.199V45.92H3.198A3.198 3.198 0 0 0 0 49.119v4.265a3.198 3.198 0 0 0 3.198 3.198Z" />
           </symbol>
+        <symbol id="telegram" viewBox="0 0 24 24">
+            <circle cx="50" cy="50" r="40" fill="blue" />
+            <title>Telegram</title>
+            <path
+                d="M24 2L0 13.25L7.66994 15.6172L19.5 6.375L10.5017 16.4913L10.509 16.4936L10.5 16.4913V22L14.8013 17.8183L20.2501 19.5L24 2Z"
+                fill="white" />
+        </symbol>
       </svg>
     <header class="site-header main-header border-container">
         <div class="header-container container">
@@ -475,13 +482,18 @@
                     </li>
                 </ul>
             </div>
-            <div class="email_input">
+            <div class="email-input">
                 <p>Subscribe</p>
-                <div>
-                    <form>
-                        <input type="email" id="email" name="email" placeholder="E-mail" required>
+                <div class="email-part2">
+                    <form  >
+                        <input type="email" id="email" name="email" placeholder="E-mail" class="email-form" required>
                     </form>
-                    <button>Subscribe</button>
+                    <div class="fbutton">
+                    <button class="subscribe" type="button">Subscribe</button>
+                    <svg class="social-media-icon" width="24" height="24">
+                        <use href="./images/icons.svg#linkedin"></use>
+                    </svg>
+                    </div>
                 </div>
 
 
