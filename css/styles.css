@@ -158,82 +158,174 @@ h1 {
     align-items: center; 
     text-align: center;
 }  
-.backdrop {
-    position: absolute; /* Section'a göre konumlandırma */
-    top: 50%; /* Dikeyde ortalama */
-    left: 50%; /* Yatayda ortalama */
-    transform: translate(-50%, -50%); /* Merkezi tam ortalama */
+.modal-window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 408px;
-    height: 584px;
-    background-color: #f9f9f9;
-    z-index: 1; /* Üst üste yığılma sırası */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
-    display: flex;
-    justify-content: center; /* İçeriği yatayda ortala */
-    align-items: center; /* İçeriği dikeyde ortala */
-    border-radius: 8px; /* Köşeleri yuvarla */
-  }
-  #closeModalBtn{
+    min-height: 584px;
+    background: #fcfcfc;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 72px 24px 24px 24px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
     width: 24px;
     height: 24px;
-    border-radius: 4px ;
-    background-color:rgba(46, 47, 66, 1);
-    
-
-  }
-  .modal h2{    
-
-    font-family: Roboto;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: 0.02em;
-    text-align: center;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-
-    
-  }
-  .asd {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 360px; 
-    height: 336px;
-    padding-left: 24px;
-}
-
-.asd label {
-    margin-bottom: 5px;
-    font-weight: bold; /* İsteğe bağlı olarak etiketleri vurgulayabilirsiniz */
-}
-
-.asd input,
-.asd textarea,
-.asd button {
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 8px;
-    box-sizing: border-box;
-}
-
-.asd textarea {
-    resize: vertical; /* Kullanıcının yüksekliği değiştirmesine izin verir */
-}
-
-.asd div {
+    border-radius: 50%;
     display: flex;
     align-items: center;
+    justify-content: center;
+    background-color: #e7e9fc;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.asd div label {
-    margin-left: 5px;
+.modal-close:hover,
+.modal-close:focus {
+    background-color: #404bbf;
+    border: none;
 }
 
-.asd button {
-    width: auto;
-    align-self: flex-start; /* Düğme sola dayalı olur */
+.modal-close-icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.modal-close:hover .modal-close-icon,
+.modal-close:focus .modal-close-icon {
+    fill: #ffffff;
+}
+
+.modal-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #2E2F42;
+    margin-bottom: 16px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.form-label {
+    position: absolute;
+    top: -12px; /* Etiketi yukarı kaydır */
+    left: 16px; /* Sol hizalama için boşluk */
+    background-color: #fcfcfc; /* Arka plan rengi form arka planıyla aynı olmalı */
+    padding: 0 4px; /* Yazıyı rahat görünür yapmak için yatay boşluk */
+    font-size: 12px; /* Yazı boyutunu küçült */
+    line-height: 1.17;
+    color: #8e8f99; /* Yazı rengi */
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.form-input {
+    width: 100%;
+    height: 40px;
+    padding-left: 16px; /* İçerik için boşluk */
+    border: 1px solid rgba(46, 47, 66, 0.4); /* Kenar rengi */
+    border-radius: 4px; /* Yuvarlak köşe */
+    outline: transparent;
+    font-size: 14px; /* Yazı boyutu */
+}
+
+.form-input:focus {
+    border-color: #4D5AE5;
+}
+
+.input-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus + .input-icon {
+    fill: #4D5AE5;
+}
+
+.privacy-label {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+}
+
+.checkbox-box {
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 2px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.visually-hidden {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.checkbox-icon {
+    width: 10px;
+    height: 8px;
+    fill: transparent;
+}
+
+.visually-hidden:checked + .checkbox-box {
+    background-color: #404bbf;
+    border: none;
+    fill: #F4F4FD;
+}
+
+.privacy-link {
+    color: #4d5ae5;
+}
+
+.submit-button {
+    display: block;
+    min-width: 169px;
+    height: 56px;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    cursor: pointer;
+    background-color: #4D5AE5;
+    border: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 
 .first-section__title {
     max-width: 496px;
