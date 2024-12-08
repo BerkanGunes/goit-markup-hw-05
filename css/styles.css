@@ -143,9 +143,9 @@ h1 {
 }
 
 .first-section {
-    position: relative; /* İçindeki div'ler için referans noktası */
+    position: relative; 
     max-width: 1440px;
-    height: 600px; /* İsteğe bağlı: yüksekliği belirleyin */
+    height: 600px;
     margin: 0 auto;
     padding: 188px 0;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
@@ -154,8 +154,8 @@ h1 {
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
-    justify-content: center; /* Yatayda ortalama */
-    align-items: center; /* Dikeyde ortalama */
+    justify-content: center; 
+    align-items: center; 
     text-align: center;
 }  
 .backdrop {
@@ -173,6 +173,67 @@ h1 {
     align-items: center; /* İçeriği dikeyde ortala */
     border-radius: 8px; /* Köşeleri yuvarla */
   }
+  #closeModalBtn{
+    width: 24px;
+    height: 24px;
+    border-radius: 4px ;
+    background-color:rgba(46, 47, 66, 1);
+    
+
+  }
+  .modal h2{    
+
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    
+  }
+  .asd {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 360px; 
+    height: 336px;
+    padding-left: 24px;
+}
+
+.asd label {
+    margin-bottom: 5px;
+    font-weight: bold; /* İsteğe bağlı olarak etiketleri vurgulayabilirsiniz */
+}
+
+.asd input,
+.asd textarea,
+.asd button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.asd textarea {
+    resize: vertical; /* Kullanıcının yüksekliği değiştirmesine izin verir */
+}
+
+.asd div {
+    display: flex;
+    align-items: center;
+}
+
+.asd div label {
+    margin-left: 5px;
+}
+
+.asd button {
+    width: auto;
+    align-self: flex-start; /* Düğme sola dayalı olur */
+}
 
 .first-section__title {
     max-width: 496px;
